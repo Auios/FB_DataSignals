@@ -1,5 +1,7 @@
 'drawSignals.bas
 
+'Define colors
+'could have used #define but whatever.
 const sz = 32
 const white = rgb(255,255,255)
 const gray = rgb(80,80,80)
@@ -13,7 +15,9 @@ declare sub drawSignal_Manchester(x as integer, y as integer, letter as string)
 declare sub drawSignal_DifferentialManchester(x as integer, y as integer, letter as string)
 declare sub drawSignal_BipolarAMI(x as integer, y as integer, letter as string)
 
-'drawSignal_NRZL(30,50,"C")
+'Usage example:
+'   drawSignal_NRZL(30,50,"C")
+
 sub drawSignal_NRZL(x as integer, y as integer, letter as string)
     if(len(letter) = 0) then
         print "Error"
